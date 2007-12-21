@@ -11,6 +11,7 @@ Group:		Networking/Other
 URL:		http://www.mavetju.org/unix/general.php
 Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.bz2
 Requires:	tcpdump
+BuildRoot:      %{_tmppath}/%{name}-buildroot
 
 %description
 A post-processor of tcpdump output to analyze sniffed DHCP
