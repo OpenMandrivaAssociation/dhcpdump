@@ -1,6 +1,6 @@
 %define name	dhcpdump
 %define version	1.7
-%define release %mkrel 3
+%define release %mkrel 5
 
 Summary:	Parse tcpdump DHCP packets
 Name:           %{name}
