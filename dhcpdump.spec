@@ -1,6 +1,6 @@
 %define name	dhcpdump
-%define version	1.7
-%define release %mkrel 5
+%define version	1.8
+%define release %mkrel 1
 
 Summary:	Parse tcpdump DHCP packets
 Name:           %{name}
@@ -9,7 +9,8 @@ Release:        %{release}
 License:        BSD
 Group:		Networking/Other
 URL:		http://www.mavetju.org/unix/general.php
-Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.bz2
+Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.gz
+Patch0: dhcpdump-1.8.patch
 Requires:	tcpdump
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 
@@ -20,17 +21,17 @@ packets.
 %prep
 
 %setup -q
+%patch0 -p0 -b .build
 
 %build
 
-%configure2_5x
-
-%make
+%make CCFLAGS="%{otpflags}"
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-%makeinstall
+install -D -m 755 dhcpdump %buildroot%_bindir/%{name}
+install -D -m644 dhcpdump.8 %buildroot%_mandir/man8/dhcpdump.8
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -40,5 +41,4 @@ packets.
 %doc CHANGES CONTACT
 %{_bindir}/*
 %{_mandir}/*/*
-
 
