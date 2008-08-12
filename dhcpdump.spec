@@ -13,6 +13,7 @@ Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.gz
 Patch0: dhcpdump-1.8.patch
 Requires:	tcpdump
 BuildRoot:      %{_tmppath}/%{name}-buildroot
+BuildRequires:  perl pcap-devel
 
 %description
 A post-processor of tcpdump output to analyze sniffed DHCP
