@@ -1,7 +1,7 @@
 Summary:	Parse tcpdump DHCP packets
 Name:           dhcpdump
 Version:        1.8
-Release:        %mkrel 4
+Release:        5
 License:        BSD
 Group:		Networking/Other
 URL:		http://www.mavetju.org/unix/general.php
