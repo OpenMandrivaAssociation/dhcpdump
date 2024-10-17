@@ -4,7 +4,7 @@ Version:        1.8
 Release:        5
 License:        BSD
 Group:		Networking/Other
-URL:		http://www.mavetju.org/unix/general.php
+URL:		https://www.mavetju.org/unix/general.php
 Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.gz
 Patch0:		dhcpdump-1.8.patch
 Requires:	tcpdump
