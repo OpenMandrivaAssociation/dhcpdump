@@ -8,6 +8,7 @@ URL:		https://www.mavetju.org/unix/general.php
 Source:         http://www.mavetju.org/download/%{name}-%{version}.tar.gz
 Patch0:		dhcpdump-1.8.patch
 Requires:	tcpdump
+BuildRequires:	make
 BuildRequires:	perl
 BuildRequires:	pcap-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
